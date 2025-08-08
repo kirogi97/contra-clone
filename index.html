@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contra-ish: Polished Retro</title>
+  <style>
+    :root {
+      --w: 800px;
+    }
+    body { margin:0; background:#0b1020; color:#eee; font-family:monospace; display:flex; flex-direction:column; align-items:center; }
+    #gameCanvas { display:block; margin:12px auto; background:#87ceeb; image-rendering: pixelated; }
+    #hud { width: var(--w); color:#fff; padding:6px 10px; box-sizing:border-box; font-size:14px; }
+    #controls { width: var(--w); text-align:center; color:#cfe; font-size:13px; margin-bottom:12px; }
+    .label { color:#ffd; font-weight:bold; }
+    .ammo { color:#ffd700; }
+    .status { color:#1abc9c; font-weight:bold; }
+    #message { text-align:center; font-weight:bold; margin-top:6px; color:#ffd;}
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="800" height="400"></canvas>
+  <div id="hud"></div>
+  <div id="controls">Controls: ← → to move, ↑ to jump, Space to shoot (hold). Q to switch weapon. Pickups refill ammo or give weapons.</div>
+  <div id="message"></div>
+  <script src="game.js"></script>
+</body>
+</html>
